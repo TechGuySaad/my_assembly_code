@@ -11,9 +11,11 @@ count: db 9
 start:
 
     mov cx, 10
-    mov bx, 0
+    
     
     l1:
+        mov bx, 0
+        mov byte[count],9
 
         l2:
             mov ax,[data + bx] ;if condition check
@@ -25,7 +27,7 @@ start:
 
         noswap:
         add bx, 2 
-        dec [count] ;loop 2 check
+        dec byte[count] ;loop 2 check
         jnz l2
     
 
