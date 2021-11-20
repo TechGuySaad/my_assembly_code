@@ -3,7 +3,7 @@
 jmp start
 
 factorial: dw 1
-val: dw 3
+val: dw 4
 
 
 start:
@@ -13,7 +13,7 @@ mov bx, [val]
 mul bx
 mov [factorial], ax
 
-dec [val]
+dec word[val]
 jnz start
 
 
